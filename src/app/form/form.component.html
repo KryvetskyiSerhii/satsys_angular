@@ -1,0 +1,16 @@
+<div class="form__block">
+  <input
+    class="form__input"
+    placeholder="Enter the hostname"
+    (input)="handleInput($event)"
+  />
+  <button class="form__btn" (click)="handleClick()">Search</button>
+</div>
+<div class="result__block">
+  <ul class="result__list">
+    <li class="result__list-item" *ngFor="let item of data.dict">
+      <div class="item-block">{{ item.key }}</div>
+      <div class="item-block">{{ item.val }}</div>
+    </li>
+  </ul>
+</div>
